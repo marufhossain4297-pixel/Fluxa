@@ -55,116 +55,147 @@
         .rethink-sans {
             font-family: "Rethink Sans", sans-serif;
         }
+
         .reddit-mono {
             font-family: "Reddit Mono", monospace;
+        }
+
+        #menu {
+            display: none;
+        }
+
+        @media screen and (max-width:576px) {
+            #menu {
+                display: block;
+            }
+
+            nav {
+                box-shadow: 0.5px 0.5px 5px 0.5px gray;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <header class="w-11/12 mx-auto sticky container">
-        <nav>
-            <div class="relative flex justify-between items-center pb-[72px]">
-                <h1 class="dm-sans font-medium text-[30px]">Fluxa</h1>
-                <ul
-                    class="sticky list-none flex gap-[27px] text-[14px] font-bold dm-sans py-5 px-6 bg-[#ffffff66] rounded-full">
-                    <li><a href="#">Benefits</a></li>
-                    <li><a href="#">Specifications</a></li>
-                    <li><a href="#">How-to</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
+    <header class="mx-auto container lg:block">
+        <nav class="px-5 py-2 ">
+            <div class="flex justify-between items-center pb-[22px] lg:pb-[72px]">
+                <h1 class="dm-sans font-bold text-[30px]">Fluxa</h1>
+                <div class="sticky">
+                    <ul
+                        class="hidden list-none lg:flex gap-[27px] text-[14px] font-bold dm-sans py-5 px-6 bg-[#ffffff66] rounded-full">
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#specific">Specifications</a></li>
+                        <li><a href="#map">How-to</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
                 <button
-                    class="bg-[#485C11] mt-[25px] text-white text-[14px] font-bold py-3.5 pr-0.5 pl-[22px] rounded-full cursor-pointer hover:bg-[#8E9C78] duration-300">Learn
+                    class="bg-[#485C11] hidden lg:block mt-[25px] text-white text-[14px] font-bold py-3.5 pr-0.5 pl-[22px] rounded-full cursor-pointer hover:bg-[#8E9C78] duration-300">Learn
                     More <i class="fa-solid fa-arrow-down fa-rotate-by mr-[22px]"
-                        style="color: rgb(255, 255, 255); --fa-rotate-angle: 225deg;"></i></button>
+                        style="color: rgb(255, 255, 255); --fa-rotate-angle: 225deg;"></i>
+                </button>
+
+                <i id="menu" class="fa-solid fa-bars"></i>
             </div>
         </nav>
     </header>
 
     <main class="w-11/12 mx-auto container">
         <section>
-            <div class="text-center mb-[100px]">
-                <h1 class="text-[160px] crimson-text">Browse everything.</h1>
+            <div class="text-center lg:mb-[100px] mb-[71px]">
+                <h1 class="lg:text-[160px] text-[76px] mt-[42px] lg:mt-0 leading-none crimson-text">Browse everything.
+                </h1>
             </div>
             <div class="mt-[200px]">
-                <div class="place-self-center mt-[100px] absolute top-80 z-10">
-                    <img src="./images/Ipad.png " alt="">
+                <div class="place-self-center lg:mt-[100px] absolute top-80 z-10">
+                    <img class="hidden lg:block relative -top-[63px]" src="./images/Ipad.png " alt="">
+                    <img class="lg:hidden relative top-[94px]" src="./images/iPhone.png" alt="">
                 </div>
                 <div class="bg-[#8E9C78] h-[362px] rounded-[30px] relative"></div>
             </div>
         </section>
 
-        <section class="mt-[50px]">
-            <div>
-                <h3 class="dm-sans text-[#6F6F6F]">Trusted by:</h3>
-                <div class="grid grid-cols-2 lg:grid-cols-6 gap-[70px] ml-[60px] mt-[50px] mb-[70px]">
-                    <img src="./images/Logo-1.png" alt="">
-                    <img src="./images/Logo-1 2.png" alt="">
-                    <img src="./images/Logo-1 3.png" alt="">
-                    <img src="./images/Logo-1 4.png" alt="">
-                    <img src="./images/Logo-1 5.png" alt="">
-                    <img src="./images/Logo-1 6.png" alt="">
-                </div>
-            </div>
-
-            <div class="border-b border-[#E9E9E9]"></div>
-        </section>
-
-        <section class="mb-[90px]">
-            <div>
-                <div class="mt-20 space-y-[50px] mb-[90px]">
-                    <h3 class="roboto-mono text-[#485C11] text-[12px]">Benefits</h3>
-                    <h1 class="crimson-text text-[60px]">We’ve cracked the code.</h1>
-                    <p class="dm-sans text-[15px] text-[#6F6F6F]">Area provides real insights, without the data
-                        overload.</p>
-                </div>
-
-                <div class="grid grid-cols-4 gap-5">
-                    <div class="border-t border-[#E9E9E9]">
-                        <img class="w-6 h-6 mb-6 mt-10" src="./images/cable.png" alt="">
-                        <h3 class="crimson-text font-normal text-[18px] mb-5">Amplify Insights</h3>
-                        <p class="dm-sans text-[15px] text-[#6F6F6F]">Unlock data-driven decisions with <br>
-                            comprehensive analytics, revealing <br> key opportunities for strategic <br> regional
-                            growth.</p>
-                    </div>
-
-                    <div class="border-t border-[#E9E9E9]">
-                        <img class="w-6 h-6 mb-6 mt-10" src="./images/Vector 2 copy 2.png" alt="">
-                        <h3 class="crimson-text font-normal text-[18px] mb-5">Control Your Global Presence</h3>
-                        <p class="dm-sans text-[15px] text-[#6F6F6F]">Manage and track satellite offices,<br> ensuring
-                            consistent performance and <br> streamlined operations everywhere.</p>
-                    </div>
-
-                    <div class="border-t border-[#E9E9E9]">
-                        <img class="w-6 h-6 mb-6 mt-10" src="./images/Vector 2.png" alt="">
-                        <h3 class="crimson-text font-normal text-[18px] mb-5">Remove Language Barriers</h3>
-                        <p class="dm-sans text-[15px] text-[#6F6F6F]">Adapt to diverse markets with <br> built-in
-                            localization for clear <br> communication and enhanced user <br> experience.</p>
-                    </div>
-
-                    <div class="border-t border-[#E9E9E9]">
-                        <img class="mb-6 mt-10" src="./images/Vector 2 copy.png" alt="">
-                        <h3 class="crimson-text font-normal text-[18px] mb-5">Visualize Growth</h3>
-                        <p class="dm-sans text-[15px] text-[#6F6F6F]">Generate precise, visually <br> compelling reports
-                            that illustrate <br> your growth trajectories across all <br> regions.</p>
+        <section id="benefits">
+            <section class="mt-[50px]">
+                <div>
+                    <h3 class="dm-sans text-[#6F6F6F]">Trusted by:</h3>
+                    <div class="grid grid-cols-2 lg:grid-cols-6 gap-[70px] ml-[60px] mt-[50px] mb-[70px]">
+                        <img src="./images/Logo-1.png" alt="">
+                        <img src="./images/Logo-1 2.png" alt="">
+                        <img src="./images/Logo-1 3.png" alt="">
+                        <img src="./images/Logo-1 4.png" alt="">
+                        <img src="./images/Logo-1 5.png" alt="">
+                        <img src="./images/Logo-1 6.png" alt="">
                     </div>
                 </div>
-            </div>
+
+                <div class="border-b border-[#E9E9E9]"></div>
+            </section>
+
+            <section class="mb-[90px]">
+                <div>
+                    <div class="mt-20 space-y-[50px] mb-[90px]">
+                        <h3 class="roboto-mono text-[#485C11] text-[12px]">Benefits</h3>
+                        <h1 class="crimson-text text-[60px]">We’ve cracked the code.</h1>
+                        <p class="dm-sans text-[15px] text-[#6F6F6F]">Area provides real insights, without the data
+                            overload.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-5">
+                        <div class="border-t border-[#E9E9E9]">
+                            <img class="w-6 h-6 mb-6 mt-10" src="./images/cable.png" alt="">
+                            <h3 class="crimson-text font-normal text-[18px] mb-5">Amplify Insights</h3>
+                            <p class="dm-sans text-[15px] text-[#6F6F6F]">Unlock data-driven decisions with <br>
+                                comprehensive analytics, revealing <br> key opportunities for strategic <br> regional
+                                growth.</p>
+                        </div>
+
+                        <div class="border-t border-[#E9E9E9]">
+                            <img class="w-6 h-6 mb-6 mt-10" src="./images/Vector 2 copy 2.png" alt="">
+                            <h3 class="crimson-text font-normal text-[18px] mb-5">Control Your Global Presence</h3>
+                            <p class="dm-sans text-[15px] text-[#6F6F6F]">Manage and track satellite offices,<br>
+                                ensuring
+                                consistent performance and <br> streamlined operations everywhere.</p>
+                        </div>
+
+                        <div class="border-t border-[#E9E9E9]">
+                            <img class="w-6 h-6 mb-6 mt-10" src="./images/Vector 2.png" alt="">
+                            <h3 class="crimson-text font-normal text-[18px] mb-5">Remove Language Barriers</h3>
+                            <p class="dm-sans text-[15px] text-[#6F6F6F]">Adapt to diverse markets with <br> built-in
+                                localization for clear <br> communication and enhanced user <br> experience.</p>
+                        </div>
+
+                        <div class="border-t border-[#E9E9E9]">
+                            <img class="mb-6 mt-10" src="./images/Vector 2 copy.png" alt="">
+                            <h3 class="crimson-text font-normal text-[18px] mb-5">Visualize Growth</h3>
+                            <p class="dm-sans text-[15px] text-[#6F6F6F]">Generate precise, visually <br> compelling
+                                reports
+                                that illustrate <br> your growth trajectories across all <br> regions.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
 
         <section class="mb-[120px]">
             <div>
-                <img class="w-[1400px] place-self-center" src="./images/Hero Image.png" alt="">
+                <img class="w-[1400px] place-self-center hidden lg:block" src="./images/Hero Image.png" alt="">
+                <img class="w-[1400px] place-self-center lg:hidden" src="./images/mobile4.png" alt="">
             </div>
         </section>
 
         <section>
-            <div class="grid grid-cols-2 gap-5 mb-[120px]">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-[120px]">
                 <div>
                     <div class="mb-[50px] border-t border-[#E9E9E9]">
                         <h1 class="crimson-text text-6xl font-normal mt-[60px] mb-10">See the Big Picture</h1>
-                        <p class="dm-sans text-[15px] text-[#6F6F6F]">Area turns your data into clear, vibrant visuals
-                            that show you exactly <br> what's happening in each region.</p>
+                        <p class="dm-sans text-[15px] text-[#6F6F6F]">Area turns your data into clear, vibrant <br
+                                class="lg:hidden"> visuals
+                            that show you exactly <br class="hidden lg:block"> what's <br class="lg:hidden"> happening
+                            in each region.</p>
                     </div>
 
                     <div>
@@ -194,30 +225,34 @@
                         </div>
 
                     </div>
-                    <button class="bg-[#DFECC6] text-[14px] mt-10 font-bold py-3.5 px-[22px] rounded-full mb-20">Discover
+                    <button
+                        class="bg-[#DFECC6] hover:bg-[#485C11] hover:text-white  duration-300 cursor-pointer text-[14px] mt-10 font-bold py-3.5 px-[22px] rounded-full mb-20">Discover
                         More</button>
                 </div>
                 <div>
-                    <img src="./images/Image-1.png" alt="">
+                    <img class="hidden lg:block" src="./images/Image-1.png" alt="">
+                    <img class=" justify-self-center lg:hidden" src="./images/mobile3.png" alt="">
                 </div>
             </div>
 
             <div class="border-b border-[#929292]"></div>
         </section>
 
-        <section class="mb-[123px]">
+        <section id="specific" class="mb-[123px]">
             <div>
                 <div class="space-y-10 text-center my-20">
                     <h3 class="roboto-mono text-[12px] text-[#485C11]">Specs</h3>
                     <h1 class="crimson-text text-[60px] font-normal">Why Choose Area?</h1>
                     <p class="dm-sans text-[#6F6F6F] text-[15px] font-normal">You need a solution that keeps up. That’s
                         why we developed Area. A developer-friendly approach to <br> streamline your business. </p>
-                    <button class="bg-[#DFECC6] text-[14px] font-bold py-3.5 px-[22px] rounded-full">Discover
+                    <button
+                        class="bg-[#DFECC6] hover:bg-[#485C11] hover:text-white  duration-300 cursor-pointer text-[14px] font-bold py-3.5 px-[22px] rounded-full">Discover
                         More</button>
                 </div>
 
-                <div class="grid grid-cols-3 gap-7">
-                    <div class="w-full max-w-md overflow-hidden rounded-4xl border border-black/10 bg-white shadow-sm">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
+                    <div
+                        class="w-full max-w-md overflow-hidden rounded-4xl border border-black/10 bg-white shadow-sm  hover:shadow-2xl duration-300 cursor-pointer">
                         <div class="dm-sans py-7 text-center text-4xl font-semibold">Area</div>
                         <div class="h-px bg-black/30"></div>
 
@@ -281,7 +316,8 @@
                     </div>
 
 
-                    <div class="w-full max-w-md overflow-hidden rounded-4xl border border-black/10 bg-white shadow-sm">
+                    <div
+                        class="w-full max-w-md overflow-hidden rounded-4xl border border-black/10 bg-white shadow-sm  hover:shadow-2xl duration-300 cursor-pointer">
                         <div class="rethink-sans py-7 text-center text-[22.86px] font-medium">WebSurge</div>
                         <div class="h-px bg-black/30"></div>
 
@@ -300,7 +336,8 @@
                                     <td class="px-8 py-7 align-middle">
                                         <div class="flex items-center gap-4">
                                             <span class="text-[15px] text-[#4d6b1b]">✓</span>
-                                            <span class="font-mono text-[12px] roboto-mono">Basic AI recommendations</span>
+                                            <span class="font-mono text-[12px] roboto-mono">Basic AI
+                                                recommendations</span>
                                         </div>
                                     </td>
                                 </tr>
@@ -309,7 +346,8 @@
                                     <td class="px-8 py-7 align-middle">
                                         <div class="flex items-center gap-4">
                                             <span class="text-[15px] text-[#4d6b1b]">✓</span>
-                                            <span class="font-mono text-[12px] roboto-mono">Restricts customization</span>
+                                            <span class="font-mono text-[12px] roboto-mono">Restricts
+                                                customization</span>
                                         </div>
                                     </td>
                                 </tr>
@@ -336,7 +374,8 @@
                                     <td class="px-8 py-7 align-middle">
                                         <div class="flex items-center gap-4">
                                             <span class="text-[15px] text-[#4d6b1b]">✕</span>
-                                            <span class="font-mono text-[12px] roboto-mono">Potential display errors</span>
+                                            <span class="font-mono text-[12px] roboto-mono">Potential display
+                                                errors</span>
                                         </div>
                                     </td>
                                 </tr>
@@ -345,7 +384,8 @@
                     </div>
 
 
-                    <div class="w-full max-w-md overflow-hidden rounded-4xl border border-black/10 bg-white shadow-sm">
+                    <div
+                        class="w-full max-w-md overflow-hidden rounded-4xl border border-black/10 bg-white shadow-sm  hover:shadow-2xl duration-300 cursor-pointer">
                         <div class="reddit-mono py-7 text-center text-[21.65px] font-medium">HyperView</div>
                         <div class="h-px bg-black/30"></div>
 
@@ -412,10 +452,18 @@
         </section>
 
         <section class="mb-[120px]">
-            <div class="flex justify-between flex-row-reverse">
+            <div class="flex lg:justify-between gap-20 flex-col-reverse lg:flex-row-reverse">
                 <div class="my-auto">
-                    <h1 class="crimson-text text-[40px] font-normal text-sm">“I was skeptical, but Area has <br> completely transformed the way I <br> manage my business. The data <br>visualizations are so clear and <br> intuitive, and the platform is so easy <br> to use. I can't imagine running my <br> company without it.”</h1>
-                    
+                    <h1 class="crimson-text text-[32px] lg:text-[40px] font-normal leading-none">
+                        “I was skeptical, but Area <br class="lg:hidden"> has <br class="hidden lg:block">
+                        completely <br class="lg:hidden"> transformed the way I <br class="hidden lg:block"> manage my
+                        business. The <br class="lg:hidden"> data <br class="hidden lg:block">visualizations are <br
+                            class="lg:hidden"> so
+                        clear and <br class="hidden lg:block"> intuitive, and <br class="lg:hidden"> the platform is so
+                        easy <br class="hidden lg:block"> to <br class="lg:hidden"> use. I can't imagine <br
+                            class="lg:hidden"> running my<br class="hidden lg:block"> company <br class="lg:hidden">
+                        without it.”</h1>
+
                     <div class="mt-[50px]">
                         <p class="text-[15px] dm-sans">John Smith</p>
                         <p class="roboto-mono text-[12px] text-[#485C11]">Head of Data</p>
@@ -428,20 +476,24 @@
             </div>
         </section>
 
-        <section>
+        <section id="map">
             <div class="border-t border-[#E9E9E9]">
-                <div class="flex justify-between py-20 items-center">
-                    <h1 class="crimson-text text-[60px]">Map Your Success</h1>
-                    <button class="bg-[#DFECC6] text-[14px] font-bold py-3.5 px-[22px] rounded-full">Discover More</button>
+                <div class="lg:flex justify-between py-20 items-center">
+                    <h1 class="crimson-text text-[50px] mb-[50px] lg:mb-0 lg:text-[60px]">Map Your Success</h1>
+                    <button
+                        class="bg-[#DFECC6] hover:bg-[#485C11] hover:text-white  duration-300 cursor-pointer text-[14px] font-bold py-3.5 px-[22px] rounded-full">Discover
+                        More</button>
                 </div>
             </div>
 
-            <div class="grid grid-cols-3 gap-5">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
                 <div class="border-t border-[#E9E9E9]">
                     <h1 class="dm-sans py-[60px] text-[80px] text-[#E3E3E3]">01</h1>
                     <div>
                         <h3 class="crimson-text mb-5 text-[18px]">Get Started</h3>
-                        <p class="dm-sans text-[15px] text-[#6F6F6F]">With our intuitive setup, you’re up and running <br> in minutes.</p>
+                        <p class="dm-sans text-[15px] text-[#6F6F6F]">With our intuitive setup, you’re up and running
+                            <br> in minutes.
+                        </p>
                     </div>
                 </div>
 
@@ -449,7 +501,8 @@
                     <h1 class="dm-sans py-[60px] text-[80px] text-[#E3E3E3]">02</h1>
                     <div>
                         <h3 class="crimson-text mb-5 text-[18px]">Customize and Configure</h3>
-                        <p class="dm-sans text-[15px] text-[#6F6F6F]">Adapt Area to your specific requirements and <br> preferences.</p>
+                        <p class="dm-sans text-[15px] text-[#6F6F6F]">Adapt Area to your specific requirements and <br>
+                            preferences.</p>
                     </div>
                 </div>
 
@@ -464,16 +517,23 @@
         </section>
 
         <section class="mt-[150px] mb-10">
-            <img class="w-[1400px] place-self-center" src="./images/Image container.png" alt="">
+            <img class="w-[1400px] place-self-center hidden lg:block" src="./images/Image container.png" alt="">
+            <img class="w-[1400px] place-self-center lg:hidden" src="./images/mobile1.png" alt="">
         </section>
 
-        <section class="border-t border-b border-[#E9E9E9]">
+        <section id="contact" class="border-t border-b border-[#E9E9E9]">
             <div class="text-center">
-                <h1 class="crimson-text mt-[120px] mb-10 text-[60px]">Connect with us</h1>
+                <h1 class="crimson-text mt-[120px] mb-10 text-[50px] lg:text-[60px]">Connect with us</h1>
 
-                <p class="dm-sans text-[15px] text-[#6F6F6F] mb-10">Schedule a quick call to learn how Area can turn your regional data into a powerful <br> advantage.</p>
+                <p class="dm-sans text-[15px] text-[#6F6F6F] mb-10">Schedule a quick call to learn how Area can turn <br
+                        class="lg:hidden">
+                    your regional data into a powerful <br class="hidden lg:block"> advantage.</p>
 
-                <button class="bg-[#485C11] text-[14px] font-bold py-3.5 px-[267px] text-white rounded-full cursor-pointer mb-[120px]">Discover More <i class="fa-solid fa-arrow-down fa-rotate-by mr-[22px]" style="color: rgb(255, 255, 255); --fa-rotate-angle: 225deg;"></i></button>
+                <button
+                    class="bg-[#485C11] hover:bg-[#8E9C78] duration-300 cursor-pointer text-[14px] font-bold py-3.5 lg:px-[267px] px-[115px] text-white rounded-full mb-[120px]">Discover
+                    More <i class="fa-solid fa-arrow-down fa-rotate-by mr-[22px]"
+                        style="color: rgb(255, 255, 255); --fa-rotate-angle: 225deg;"></i>
+                </button>
             </div>
         </section>
     </main>
@@ -481,10 +541,10 @@
     <footer class="w-11/12 mx-auto container mb-10">
         <div class=" mt-[50px] mb-[90px]">
             <div>
-                <ul class="list-none flex gap-[27px] text-[14px] font-bold dm-sans">
-                    <li>Benefits</li>
-                    <li>Specifications</li>
-                    <li>How-to</li>
+                <ul class="list-none flex gap-[27px] flex-col lg:flex-row text-[14px] font-bold dm-sans">
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#specific">Specifications</a></li>
+                    <li><a href="#map">How-to</a></li>
                 </ul>
             </div>
         </div>
